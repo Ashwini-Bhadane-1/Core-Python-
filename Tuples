@@ -1,0 +1,29 @@
+#check whether an element exists within tuple.
+# Get number of elements for the tuple
+n = int(input("How many elements do you want in the tuple? "))
+
+elements = []
+
+# Take input elements
+for i in range(n):
+    elem = input(f"Enter element {i+1}: ")
+    elements.append(elem)
+
+# Convert list to tuple
+user_tuple = tuple(elements)
+
+# Ask for element to search
+search_elem = input("Enter the element to check if it exists in the tuple: ")
+
+# Check if element exists using loop
+found = False
+for item in user_tuple:
+    if item == search_elem:
+        found = True
+        break
+
+# Output result
+if found:
+    print(f"The element '{search_elem}' exists in the tuple.")
+else:
+    print(f"The element '{search_elem}' does NOT exist in the tuple.")
