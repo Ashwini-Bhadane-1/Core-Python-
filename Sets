@@ -1,0 +1,15 @@
+#program to iterate over sets.
+# Ask user how many elements they want in the set
+n = int(input("How many elements do you want in the set? "))
+
+user_set = set()
+
+# Take input for each element and add to set
+for i in range(n):
+    elem = input(f"Enter element {i+1}: ")
+    user_set.add(elem)
+
+# Iterate over the set and print each element
+print("Iterating over the set:")
+for item in user_set:
+    print(item)
