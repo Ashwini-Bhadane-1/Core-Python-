@@ -1,0 +1,16 @@
+#iterate over dictionaries using for loops.
+# Input dictionary from user
+n = int(input("How many key-value pairs do you want in the dictionary? "))
+
+user_dict = {}
+
+for i in range(n):
+    key = input(f"Enter key {i+1}: ")
+    value = input(f"Enter value for key '{key}': ")
+    user_dict[key] = value
+
+# Iterate over dictionary items and print them
+print("\nDictionary contents:")
+
+for key, value in user_dict.items():
+    print(f"Key: {key}, Value: {value}")
