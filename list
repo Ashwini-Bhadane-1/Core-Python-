@@ -1,0 +1,17 @@
+#program to sum all the items in a list.
+# Ask the user how many numbers they want to enter
+n = int(input("How many numbers do you want to enter? "))
+
+num_list = []
+
+# Take user input for each number
+for i in range(n):
+    num = int(input(f"Enter number {i+1}: "))
+    num_list.append(num)
+
+# Sum the numbers using a loop
+total_sum = 0
+for num in num_list:
+    total_sum += num
+
+print("Sum of all items in the list:", total_sum)
