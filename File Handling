@@ -1,0 +1,17 @@
+#program to append text to a file and display the text.
+# Text to append
+text_to_append = "This is the new text to add.\n"
+# Open the file in append mode ('a')
+file = open('example.txt', 'a')
+# Append the text
+file.write(text_to_append)
+# Close the file after writing
+file.close()
+# Now open the file in read mode to display the content
+file = open('filename.txt', 'r')
+# Read and print the content
+content = file.read()
+print("Updated file content:\n")
+print(content)
+# Close the file
+file.close()
