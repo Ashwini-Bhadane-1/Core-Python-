@@ -1,0 +1,40 @@
+# Check whether the string is Symmetrical or Palindrome
+
+def is_palindrome(s):
+    n = len(s)
+    for i in range(n // 2):
+        if s[i] != s[n - i - 1]:
+            return False
+    return True   # moved outside the loop
+
+
+def is_symmetrical(s):
+    n = len(s)
+    mid = n // 2
+
+    # Determine starting index of second half
+    if n % 2 == 0:
+        start2 = mid
+    else:
+        start2 = mid + 1
+
+    for i in range(mid):
+        if s[i] != s[start2 + i]:
+            return False
+    return True
+
+
+# Input from user
+string = input("Enter a string: ")
+
+# Check palindrome
+if is_palindrome(string):
+    print("The string is a Palindrome.")
+else:
+    print("The string is NOT a Palindrome.")
+
+# Check symmetrical
+if is_symmetrical(string):
+    print("The string is Symmetrical.")
+else:
+    print("The string is NOT Symmetrical.")
